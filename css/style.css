@@ -1,25 +1,9 @@
 
-
-
-/* Hero Image Animation */
-
-/* Cog Icon */
-.cog{
-    -webkit-animation: cogSpin 4s infinite linear;
-    -moz-animation: cogSpin 4s linear infinite; 
-    -o-animation: cogSpin 4s linear infinite; 
-    animation: cogSpin 4s linear infinite; 
-    transform-origin: 24px 19px; 
-    -webkit-transform-origin: 24px 19px; 
-    -moz-transform-origin: 24px 19px;
-}
-@keyframes cogSpin {
-    from {transform: rotate(0) translate(-34.2%,-30.5%)}
-    to {transform: rotate(360deg) translate(-34.2%,-30.5%)}
-}
-
-/* Light Bulb Icon */
-.light-bulb{
+svg{max-width: 600px;}
+/* Light Bulb Icon and lines inside black window icon*/
+.light-bulb,
+.straight-line,
+.blue-dots{
     -webkit-animation: OnOff 3s infinite linear;
     -moz-animation: OnOff 3s linear infinite; 
     -o-animation: OnOff 3s linear infinite; 
@@ -40,23 +24,26 @@
     0% { opacity: 0;}
     10% {opacity: 1;}
 }
-.light-ray:nth-last-child(1){animation-delay: .1s}
-.light-ray:nth-last-child(2){animation-delay: .2s}
-.light-ray:nth-last-child(3){animation-delay: .3s}
-.light-ray:nth-last-child(4){animation-delay: .4s}
-.light-ray:nth-last-child(5){animation-delay: .5s}
-.light-ray:nth-last-child(6){animation-delay: .6s}
-.light-ray:nth-last-child(7){animation-delay: .7s}
-.light-ray:nth-last-child(8){animation-delay: .8s}
-.light-ray:nth-last-child(9){animation-delay: .9s}
-.light-ray:nth-last-child(10){animation-delay: 1s}
-.light-ray:nth-last-child(11){animation-delay: 1.1s}
-.light-ray:nth-last-child(12){animation-delay: 1.2s}
-.light-ray:nth-last-child(13){animation-delay: 1.3s}
+.light-ray:nth-last-of-type(4){animation-delay: .1s}
+.light-ray:nth-last-of-type(5){animation-delay: .2s}
+.light-ray:nth-last-of-type(6){animation-delay: .3s}
+.light-ray:nth-last-of-type(7){animation-delay: .4s}
+.light-ray:nth-last-of-type(8){animation-delay: .5s}
+.light-ray:nth-last-of-type(9){animation-delay: .6s}
+.light-ray:nth-last-of-type(10){animation-delay: .7s}
+.light-ray:nth-last-of-type(11){animation-delay: .8s}
+.light-ray:nth-last-of-type(12){animation-delay: .9s}
+.light-ray:nth-last-of-type(13){animation-delay: 1s}
+.light-ray:nth-last-of-type(14){animation-delay: 1.1s}
+.light-ray:nth-last-of-type(15){animation-delay: 1.2s}
+.light-ray:nth-last-of-type(16){animation-delay: 1.3s}
 
-/* code icon */
-.orange-rectangle{
-    transform-origin: 5% 5%;
+/* Code icon and Curly Braces with cube icon */
+.orange-rectangle,
+.cube{
+    transform-origin: -28% -11%;
+    -webkit-transform-origin: -28% -11%; 
+    -moz-transform-origin: -28% -11%;
     -webkit-animation: zoomIn .8s linear infinite alternate;
     -moz-animation: zoomIn .8s linear infinite alternate; 
     -o-animation: zoomIn .8s linear infinite alternate; 
@@ -66,140 +53,92 @@
     to{transform: scale(1)}
     from{transform: scale(1.1)}
 }
-.right-arrow{    
-    -webkit-animation: moveRight .8s linear infinite alternate;
-    -moz-animation: moveRight .8s linear infinite alternate; 
-    -o-animation: moveRight .8s linear infinite alternate; 
-    animation: moveRight .8s linear infinite alternate; 
-}
-@keyframes moveRight{
-    from{transform: translate(-51.5%, -27.5%)}
-    to{transform: translate(-51.9%, -27.5%)}
-}
-.left-arrow{
+.left-arrow,
+.opening-bracket{    
     -webkit-animation: moveLeft .8s linear infinite alternate;
     -moz-animation: moveLeft .8s linear infinite alternate; 
     -o-animation: moveLeft .8s linear infinite alternate; 
     animation: moveLeft .8s linear infinite alternate; 
 }
 @keyframes moveLeft{
-    from{transform: translate(-49.5%, -27.5%)}
-    to{transform: translate(-49%, -27.5%)} 
+    from{transform: translateX(-4px)}
+    to{transform: translate(0)}
+}
+.right-arrow,
+.closing-bracket{
+    -webkit-animation: moveRight .8s linear infinite alternate;
+    -moz-animation: moveRight .8s linear infinite alternate; 
+    -o-animation: moveRight .8s linear infinite alternate; 
+    animation: moveRight .8s linear infinite alternate; 
+}
+@keyframes moveRight{
+    from{transform: translateX(4px)}
+    to{transform: translate(0)}
 }
 
 /* Line icon */
 .first-line{ 
-    -webkit-animation: slideLine .8s linear infinite alternate;
-    -moz-animation: slideLine .8s linear infinite alternate; 
-    -o-animation: slideLine .8s linear infinite alternate;    
-    animation: slideLine .8s linear infinite alternate; 
+    -webkit-animation: moveLeft .6s linear infinite alternate;
+    -moz-animation: moveLeft .6s linear infinite alternate; 
+    -o-animation: moveLeft .6s linear infinite alternate;    
+    animation: moveLeft .6s linear infinite alternate; 
 }
-@keyframes slideLine {
-    from {transform: translate(-53.3%, -22.6%);}
-    to {transform: translate(-55.3%, -22.6%);}
+.second-line{  
+    -webkit-animation: moveRight 1.2s linear infinite alternate;
+    -moz-animation: moveRight 1.2s linear infinite alternate; 
+    -o-animation: moveRight 1.2s linear infinite alternate;   
+    animation: moveRight 1.2s linear infinite alternate; 
+}
+.last-line{ 
+    -webkit-animation: moveLeft 1s linear infinite alternate;
+    -moz-animation: moveLeft 1s linear infinite alternate; 
+    -o-animation: moveLeft 1s linear infinite alternate;    
+    animation: moveLeft 1s linear infinite alternate; 
 }
 
-.second-line{  
-    -webkit-animation: slideLineForward 1s linear infinite alternate;
-    -moz-animation: slideLineForward 1s linear infinite alternate; 
-    -o-animation: slideLineForward 1s linear infinite alternate;   
-    animation: slideLineForward 1s linear infinite alternate; 
-}
-@keyframes slideLineForward {
-    to {transform: translate(-53.3%, -22%)}
-    from {transform: translate(-55.3%, -22%);}
-}
-.last-line{    
-    -webkit-animation: slideLineBackward 1.2s linear infinite alternate;
-    -moz-animation: slideLineBackward 1.2s linear infinite alternate; 
-    -o-animation: slideLineBackward 1.2s linear infinite alternate; 
-    animation: slideLineBackward 1.2s linear infinite alternate; 
-}
-@keyframes slideLineBackward {
-    from {transform: translate(-53.3%, -21.2%)}
-    to {transform: translate(-55.3%, -21.2%);}
-}
 
 /* Circle with Arrow icon */
-.arrow-circle-down{    
+.arrow-circle{    
     -webkit-animation: spinArrowDown 4s linear infinite;
     -moz-animation: spinArrowDown 4s linear infinite; 
     -o-animation: spinArrowDown 4s linear infinite; 
     animation: spinArrowDown 4s linear infinite;
 }
 @keyframes spinArrowDown {
-    from {transform: rotate(0deg) translate(-53%, -18%)}
-    to {transform: rotate(-360deg) translate(-53%, -18%)}
+    from {transform: rotate(0deg)}
+    to {transform: rotate(-360deg)}
 }
-.arrow-circle-up{    
-    -webkit-animation: spinArrowUp 4s linear infinite;
-    -moz-animation: spinArrowUp 4s linear infinite; 
-    -o-animation: spinArrowUp 4s linear infinite; 
-    animation: spinArrowUp 4s linear infinite;     
+.arrow-circle{
+    transform-origin: -29.9% -12.1%;
+    -webkit-transform-origin: -29.9% -12.1%; 
+    -moz-transform-origin: -29.9% -12.1%;  
 }
-@keyframes spinArrowUp {
-    from {transform: rotate(0deg) translate(-52.4%, -17.7%)}
-    to {transform: rotate(-360deg) translate(-52.4%, -17.7%)}
+
+/* Cog Icon */
+.cog{
+    transform-origin: -147px -63.5px;
+    -webkit-transform-origin:-147px -63.5px; 
+    -moz-transform-origin: -147px -63.5px;
+    -webkit-animation: spinCog 4s linear infinite;
+    -moz-animation: spinCog 4s linear infinite; 
+    -o-animation: spinCog 4s linear infinite; 
+    animation: spinCog 4s linear infinite;
 }
-.arrow-circle-up,.arrow-circle-down{
-    transform-origin: 15px 15px;
-    -webkit-transform-origin: 15px 15px; 
-    -moz-transform-origin: 15px 15px;  
+@keyframes spinCog {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+/* Elements inside black window icon */
+.black-window{
+    animation: shakeUp 1s linear infinite alternate;
+}
+@keyframes shakeUp {
+    from {transform: translate(63.9%, 46%);}
+    to {transform: translate(63.9%, 45%);}
 }
 
 
-
-/* Curly Braces with cube icon */
-
-.opening-bracket{
-    -webkit-animation: moveRightBracket .8s linear infinite alternate;
-    -moz-animation: moveRightBracket .8s linear infinite alternate; 
-    -o-animation: moveRightBracket .8s linear infinite alternate;
-    animation: moveRightBracket .8s linear infinite alternate;
-}
-@keyframes moveRightBracket{
-    to {transform: translate(-32.8%, -37.1%);}
-    from {transform: translate(-33.5%, -37.1%);}
-}
-.closing-bracket{
-    -webkit-animation: moveleftBracket .8s linear infinite alternate;
-    -moz-animation: moveleftBracket .8s linear infinite alternate; 
-    -o-animation: moveleftBracket .8s linear infinite alternate;
-    animation: moveleftBracket .8s linear infinite alternate;
-}
-@keyframes moveleftBracket{
-    from {transform: translate(-29.5%, -37.1%);}
-    to {transform: translate(-30.5%, -37.1%);}
-}
-.cube{
-    transform-origin: 14px 0px;
-    -webkit-animation: zoomInCube .8s linear infinite alternate;
-    -moz-animation: zoomInCube .8s linear infinite alternate; 
-    -o-animation: zoomInCube .8s linear infinite alternate; 
-    animation: zoomInCube .8s linear infinite alternate;
-}
-@keyframes zoomInCube{
-    to {transform: scale(1) translate(-31.8%,-37%);}
-    from {transform: scale(1.2) translate(-31.8%,-37%);}
-}
-
-/* Blue spot and lines inside window icon*/
-.spot,.straight-line{
-    -webkit-animation: OnOff 3s infinite linear;
-    -moz-animation: OnOff 3s linear infinite; 
-    -o-animation: OnOff 3s linear infinite; 
-    animation: OnOff 3s linear infinite; 
-}
-.spot:nth-child(2){animation-delay: .4s}
-.spot:nth-child(3){animation-delay: .8s}
-.spot:nth-child(4){animation-delay: 1.2s}
-.spot:nth-child(5){animation-delay: 1.8s}
-.spot:nth-child(6){animation-delay: 2.2s}
-.spot:nth-child(7){animation-delay: 2.8s}
-
-.straight-line:nth-of-type(even){animation-delay: 1s}
-
-/* window icon */
 .orange-circle{
     -webkit-animation:moveUp 1s linear infinite alternate;
     -moz-animation: moveUp 1s linear infinite alternate; 
@@ -207,26 +146,225 @@
     animation: moveUp 1s linear infinite alternate;
 }
 @keyframes moveUp{
-    from {transform: translate(17%, 6.5%);}
-    to {transform: translate(17%, 7.5%);}    
+    from {transform: translateY(-2px);}
+    to {transform: translateY(0px);}    
 }
-.purple-circle{
+.purple-circle,
+.forward-slash{
     -webkit-animation:moveDown 1s linear infinite alternate;
     -moz-animation:moveDown 1s linear infinite alternate; 
     -o-animation:moveDown 1s linear infinite alternate;
     animation: moveDown 1s linear infinite alternate;
 }
 @keyframes moveDown{
-    from {transform: translate(-37.3%, -27.6%);}
-    to {transform: translate(-37.3%, -28.6%);}      
+    from {transform: translateY(2px);}
+    to {transform: translateY(0px);}       
 }
-.forward-slash{ 
-    -webkit-animation:shiftUp 1s linear infinite alternate;
-    -moz-animation:shiftUp 1s linear infinite alternate; 
-    -o-animation:shiftUp 1s linear infinite alternate;   
-    animation: shiftUp 1s linear infinite alternate;
+.straight-line{
+    opacity: 0;
 }
-@keyframes shiftUp{
-    from {transform: translate(-37.1%, -31%);}
-    to {transform: translate(-37.1%, -31.8%);}        
+
+.straight-line:nth-last-of-type(8){animation-delay: .4s}
+.straight-line:nth-last-of-type(7),
+.straight-line:nth-last-of-type(3){animation-delay: .8s}
+.straight-line:nth-last-of-type(6){animation-delay: 1.2s}
+.straight-line:nth-last-of-type(5){animation-delay: 1.8s}
+.straight-line:nth-last-of-type(4){animation-delay: 2.2s}
+
+/* cross icons */
+.cross-one{
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    -webkit-animation:crossFadeIn 2s linear infinite forwards;
+    -moz-animation:crossFadeIn 2s linear infinite forwards;
+    -o-animation:crossFadeIn 2s linear infinite forwards;
+    animation:crossFadeIn 2s linear infinite forwards;
 }
+.cross-two{
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    -webkit-animation:crossFadeOut 2s linear 1s infinite forwards;
+    -moz-animation:crossFadeOut 2s linear 1s infinite forwards;
+    -o-animation:crossFadeOut 2s linear 1s infinite forwards;
+    animation:crossFadeOut 2s linear 1s infinite forwards;
+}
+@keyframes crossFadeIn{
+    40%,100% {opacity: 1;stroke-dashoffset: 0}
+    0% { opacity: 0;}
+    10% {opacity: 1;}
+}
+@keyframes crossFadeOut{
+    80%,100% {opacity: 0;stroke-dashoffset: 0}
+    0% { opacity: 1;}
+    40% {opacity: 1;stroke-dashoffset: 0}    
+}
+
+/* HTML text icon */
+.html-container{
+    -webkit-animation:slideHtml 1s linear infinite alternate;
+    -moz-animation:slideHtml 1s linear infinite alternate;
+    -o-animation:slideHtml 1s linear infinite alternate;
+    animation:slideHtml 1s linear infinite alternate;
+}
+@keyframes slideHtml{
+    from {transform: translate(60.6%, 31.9%);}
+    to {transform: translate(61.6%, 31.9%);}  
+}
+.html-text{
+    -webkit-animation:htmlTag 1.6s linear infinite forwards;
+    -moz-animation:htmlTag 1.6s linear infinite forwards;
+    -o-animation:htmlTag 1.6s linear infinite forwards;
+    animation:htmlTag 1.6s linear infinite forwards;
+    transform-origin: -30% -13%;
+    -webkit-transform-origin:-30% -13%; 
+    -moz-transform-origin: -30% -13%;
+}
+@keyframes htmlTag{
+    0% {transform: scale(0);}
+    60%,100%{transform: scale(1);}    
+}
+
+/* Comment icon */
+.quote-bubble{
+    transform-origin: -24% -5%;
+    -webkit-transform-origin:-24% -5%; 
+    -moz-transform-origin: -24% -5%;
+    -webkit-animation:zoomInComment 2s linear forwards;
+    -moz-animation:zoomInComment 2s linear forwards;
+    -o-animation:zoomInComment 2s linear forwards;
+    animation:zoomInComment 2s linear forwards;
+}
+@keyframes zoomInComment{
+    0% {transform: scale(0);}
+    50%,100% {transform: scale(1);}    
+}
+.quote-line-top,
+.quote-line-mid,
+.quote-line-bottom{
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    -webkit-animation:commentLine 2s infinite;
+    -moz-animation:commentLine 2s infinite;
+    -o-animation:commentLine 2s infinite;
+    animation:commentLine 2s infinite ;
+}
+.quote-line-top{animation-delay: .8s}
+.quote-line-mid{animation-delay: .9s}
+.quote-line-bottom{animation-delay: 1s}
+
+@keyframes commentLine{
+    0% {opacity: 1;}
+    45%{stroke-dashoffset: 0;opacity: 1;}
+    65%{stroke-dashoffset: 0;opacity: 0;}
+    100% {stroke-dashoffset: 0;opacity: 0;}   
+}
+
+/* Hero Animation */
+.hero-face{
+    -webkit-animation:shakeNeck 1.2s linear infinite alternate;
+    -moz-animation:shakeNeck 1.2s linear infinite alternate;
+    -o-animation:shakeNeck 1.2s linear infinite alternate;
+    animation:shakeNeck 1.2s linear infinite alternate;
+    transform-origin: -14% 0%;
+    -webkit-transform-origin:-14% 0%; 
+    -moz-transform-origin:-14% 0%;
+}
+@keyframes shakeNeck{
+    from {transform: rotate(-20deg) translate(15%, 0%);}
+    to {transform: rotate(-25deg) translate(15%, 0%);}    
+}
+.hero-right-foot{
+    -webkit-animation:shakeRightFoot 1.2s linear infinite alternate;
+    -moz-animation:shakeRightFoot 1.2s linear infinite alternate;
+    -o-animation:shakeRightFoot 1.2s linear infinite alternate;
+    animation:shakeRightFoot 1.2s linear infinite alternate;
+    transform-origin: -32% 0;
+    -webkit-transform-origin: -32% 0; 
+    -moz-transform-origin: -32% 0;
+}
+@keyframes shakeRightFoot{
+    from {transform: rotate(15deg) translate(1.5%, -2%);}
+    to {transform: rotate(0) translate(0, 0);}    
+}
+.hero-left-hand{
+    -webkit-animation:shakeleftHand 1.2s linear infinite alternate;
+    -moz-animation:shakeleftHand 1.2s linear infinite alternate;
+    -o-animation:shakeleftHand 1.2s linear infinite alternate;
+    animation:shakeleftHand 1.2s linear infinite alternate;
+    transform-origin: -26% 7%;
+    -webkit-transform-origin:-26% 7%; 
+    -moz-transform-origin:-26% 7%;
+}
+@keyframes shakeleftHand{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(15deg);}    
+}
+
+/* Plant Leaves icon */
+.large-leaves{  
+    -webkit-animation:shakeLargeLeaves 1.2s linear infinite alternate;
+    -moz-animation:shakeLargeLeaves 1.2s linear infinite alternate;
+    -o-animation:shakeLargeLeaves 1.2s linear infinite alternate;
+    animation:shakeLargeLeaves 1.2s linear infinite alternate;  
+    transform-origin: -35% 45%;
+    -webkit-transform-origin:-35% 45%; 
+    -moz-transform-origin:-35% 45%;
+}
+@keyframes shakeLargeLeaves{
+    from {transform: rotate(0deg) translate(20px, 0);}
+    to {transform: rotate(2deg) translate(20px, 0);}    
+}
+
+.short-leaves{  
+    -webkit-animation:shakeShortLeaves 1.4s linear infinite alternate;
+    -moz-animation:shakeShortLeaves 1.4s linear infinite alternate;
+    -o-animation:shakeShortLeaves 1.4s linear infinite alternate;
+    animation:shakeShortLeaves 1.4s linear infinite alternate;  
+    transform-origin: -35% 35%;
+    -webkit-transform-origin: -35% 35%; 
+    -moz-transform-origin: -35% 35%;
+}
+@keyframes shakeShortLeaves{
+    from {transform: rotate(0deg) translate(35px, 46px);}
+    to {transform: rotate(-2deg) translate(35px, 46px)}    
+}
+
+.smaller-leaves{  
+    -webkit-animation:shakeSmallerLeaves 1.6s linear infinite alternate;
+    -moz-animation:shakeSmallerLeaves 1.6s linear infinite alternate;
+    -o-animation:shakeSmallerLeaves 1.6s linear infinite alternate;
+    animation:shakeSmallerLeaves 1.6s linear infinite alternate;  
+    transform-origin: -35% 35%;
+    -webkit-transform-origin: -35% 35%; 
+    -moz-transform-origin: -35% 35%;
+}
+@keyframes shakeSmallerLeaves{
+    from {transform: rotate(0deg) translate(0, 36%);}
+    to {transform: rotate(4deg) translate(0, 36%)}    
+}
+
+/* Orange Drop icon */
+.drop-top-right{
+    transform-origin: 81% 10%;
+    animation: moveDrop 1.6s linear infinite alternate; 
+}
+.drop-bottom-right{
+    transform-origin: 78% 36%;
+    animation: moveDrop 1.6s linear infinite alternate; 
+}
+@keyframes moveDrop{
+    0% {transform: rotate(-35deg);}
+    100% {transform:  rotate(0deg);}    
+}
+.drop-mid-left{
+    transform-origin: 20% 20%;
+    animation: moveDropLeft 1.6s linear infinite alternate; 
+}
+@keyframes moveDropLeft{
+    100% {transform: rotate(-35deg);}
+    0% {transform:  rotate(0deg);}    
+}
+
+
+
+
